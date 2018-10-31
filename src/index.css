@@ -1,14 +1,63 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Reset */
+*{
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;  
+}
+body{background-color: #e16f3c; margin:0; padding:0;}
+a{text-decoration: none;}
+.header{display: flex; background-color: rgba(0,0,0,.8);}
+/* Small Smartphones */
+@media screen and (max-width: 480px){
+  .header{flex-direction: column; }
+  .nav{display: none; flex-direction: column; order:2;}
+      .nav a{width: 100%;text-decoration: none; text-align: center; padding: 10px 0; color: #f1f1f1; transition: all 200ms linear; -webkit-transition: all 200ms linear; -moz-transition: all 200ms linear; -ms-transition: all 200ms linear; -o-transition: all 200ms linear; }
+      .nav a:hover{color: #bbb;}
+  .buttonMob{order:1; text-align: right; padding: 5px 5% 5px 0; cursor: pointer;}
+  .buttonMob:hover{opacity: 0.7;}
+  .logo{position: absolute; top:10px; left:5%;} 
+  .redes{padding: 5% 0; order: 3; text-align: center;border-top:2px solid rgba(0, 0, 0, 0.1);border-bottom:2px solid rgba(0, 0, 0, 0.1);}    
+  .redes a{margin:0 3%; color:#fff;} 
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* Medius Smartphones */
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+}
+
+/* Larges Smartphones and Small notebooks*/
+@media screen and (min-width: 769px) and (max-width: 1199px){
+
+}
+
+/* Xlarges screens */
+@media screen and (min-width: 1200px){
+  .header{
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;    
+    padding: 0px 20px 0px 50px;    
+  }
+   .logo{order:1; width: 16%; border-right: 1px solid #bbb;}
+   .nav{order: 2; width:69%; padding: 20px 0; }
+    .nav a{
+      text-transform: uppercase;
+      padding-bottom:5px;
+      margin: 0 20px;
+      color:#fff;
+      transition: all 200ms linear;
+      -webkit-transition: all 200ms linear;
+      -moz-transition: all 200ms linear;
+      -ms-transition: all 200ms linear;
+      -o-transition: all 200ms linear;
+      font-size:15px;
+      font-weight: bold;
+      text-align: center;
+}
+    .nav a:hover{border-bottom: 1px solid #fff;}
+   .redes{order:3; width: 15%;color:#fff; padding: 20px 0;}
+    .redes a{color: #fff; text-align: center; margin: 0 10px;}
 }
